@@ -1,7 +1,7 @@
 package routes
 
 import (
-	"Ymmersion/src/controllers"
+	controllers "Ymmersion/src/Controllers"
 	"net/http"
 )
 
