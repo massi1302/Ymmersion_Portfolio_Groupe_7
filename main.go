@@ -1,14 +1,11 @@
 package main
 
 import (
-	"net/http"
-	"os"
+	"Ymmersion/src/routes"
+	temp "Ymmersion/templates"
 )
 
-// creation d'un simple serveur web
 func main() {
-	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		w.Write([]byte("Hello World"))
-	})
-	http.ListenAndServe(":"+os.Getenv("PORT"), nil)
+	temp.InitTemplates()
+	routes.InitServe()
 }
