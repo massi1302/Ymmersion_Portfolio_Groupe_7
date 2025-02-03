@@ -1,12 +1,12 @@
 @font-face {
-    font-family: 'DealingDisplay';
-    src: url('/assets/Fonts/Dealing-Display-BF67587c76dda92'), format('opentype');
-    font-weight: normal;
+    font-family: 'Dealing-Display-BF67587c76dda92';
+    src: url('/assets/Font/Dealing-Display-BF67587c76dda92.otf'), format('opentype');
+    font-weight: bold;
     font-style: normal;
   }
 
   #newfont {
-    font-family: 'DealingDisplay';
+    font-family: 'Dealing-Display-BF67587c76dda92';
   }
   
   * {
@@ -15,8 +15,68 @@
     box-sizing: border-box;
     text-decoration: none;
     font-weight: bold;
-    font-family: "Lexend Giga", serif;
+    font-family: "Questrial";
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
   }
+
+  .logo {
+    font-family: 'Dealing-Display-BF67587c76dda92';
+
+  }
+
+  body {
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: white;
+  }
+  
+  .nav-container {
+    display: flex;
+    justify-content: center;
+    width: 1fr;
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-top: 30px;
+    gap: 30px;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 50px;
+    gap: 70px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2) ;
+    border-radius: 10px;
+    height: 40px;
+  }
+  
+  .left-nav {
+    font-size: 28px;
+    font-family: "Dealing-Display";
+  }
+  
+  .right-nav {
+    display: flex;
+    gap: 30px;
+    font-weight: 400;
+    font-style: normal;
+    font-size: larger;
+  }
+  
+  .right-nav a:link {
+    color: #03120e;
+    position: relative;
+    text-decoration: none;
+  }
+  
+  .right-nav a:visited {
+    color: #03120e;
+    position: relative;
+    text-decoration: none;
+  }
+  
