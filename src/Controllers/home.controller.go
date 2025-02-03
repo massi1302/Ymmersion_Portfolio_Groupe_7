@@ -7,5 +7,5 @@ import (
 
 func HomePage(w http.ResponseWriter, r *http.Request) {
 
-	temp.Temp.ExecuteTemplate(w, "home", nil)
+	temp.Temp.ExecuteTemplate(w, "index", nil)
 }

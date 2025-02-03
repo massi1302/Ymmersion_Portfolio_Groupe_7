@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'Dailen-Style-BF673e8f5862f96';
+    src: url('/assets/Font/Dailen-Style-BF673e8f5862f96.otf'), format('opentype');
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  #newfont {
+    font-family: 'Dailen-Style-BF673e8f5862f96';
+  }
+
+main {
+    margin: 30px 60px;
+    border-radius: 25px;
+    width: 1fr;
+    height: 90vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(/assets/Images/codioful-formerly-gradienta--4doJI-wd_s-unsplash.jpg);
+}
+
+.spot-light h1 {
+    display: flex;
+    justify-content: center;
+    font-family: 'Dailen-Style-BF673e8f5862f96';
+    font-size: 32px;
+}
