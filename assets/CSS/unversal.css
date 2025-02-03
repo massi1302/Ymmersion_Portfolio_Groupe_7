@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'DealingDisplay';
+    src: url('/assets/Fonts/Dealing-Display-BF67587c76dda92'), format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  #newfont {
+    font-family: 'DealingDisplay';
+  }
+  
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: "Lexend Giga", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+  }
