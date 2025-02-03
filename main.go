@@ -1,8 +1,8 @@
 package main
 
 import (
+	temp "Ymmersion/Templates"
 	"Ymmersion/src/routes"
-	temp "Ymmersion/templates"
 )
 
 func main() {
