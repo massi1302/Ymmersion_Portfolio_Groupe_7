@@ -26,6 +26,7 @@ main {
     display: flex;
     justify-content: center;
     font-family: 'Glakion-Demo-BF6773916988225';
+    color: #1f387e;
 }
 
 .description {

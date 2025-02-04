@@ -1,21 +1,17 @@
-{{define "projets"}}
+{{define "tableau"}}
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio des immersions - YtrangeR">
-    <title> Portfolio d'immersion</title>
-    
-    <!-- CSS -->
-    <link rel="stylesheet" href="/assets/CSS/unversal.css">
-    <link rel="stylesheet" href="/assets/CSS/projets.css">
-    <!-- Fonts -->
+    <title>Journal de Bord | Ymmersions</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Questrial&family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Questrial&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/CSS/unversal.css">
+    <link rel="stylesheet" href="/assets/CSS/TableauDeBord.css">
 </head>
 
 <body>
@@ -33,70 +29,89 @@
             </nav>
         </div>
     </header>
-
-
     <main>
         <div class="spot-light">
-            <h1>
-               Les épreuves de la semaine
-            </h1>
+            <h1>Journal de Bord</h1>
             <p class="description">
-                nous devions créer un site portfolio dynamique documentant les
-                épreuves réalisées pendant une semaine.
+                Découvrez le parcours détaillé de notre semaine d'immersion créative
             </p>
         </div>
-        <section class="challenges-grid">
-            <!-- Challenge 1 -->
-            <a href="/challenge1" class="challenge-card">
-                <img src="/assets/Images/creeper-min.png" alt="Challenge 1">
-                <div class="overlay">
-                    <h3 class="challenge-title">Challenge 1</h3>
-                </div>
-            </a>
 
-            <!-- Challenge 2 -->
-            <a href="/challenge2" class="challenge-card">
-                <img src="/assets/Images/Palindrome.png" alt="Challenge 2">
-                <div class="overlay">
-                    <h3 class="challenge-title">Challenge 2</h3>
+        <div class="days-container">
+            <div class="day-card">
+                <div class="day-header">
+                    <h2>Jour 1</h2>
+                    <span class="day-date">Lundi, 15 Janvier</span>
                 </div>
-            </a>
+                <div class="day-content">
+                    <p>Première journée d'immersion : Exploration des concepts, brainstorming initial et définition des objectifs du projet.</p>
+                    <div class="day-tags">
+                        <span class="tag">Démarrage</span>
+                        <span class="tag">Brainstorming</span>
+                    </div>
+                </div>
+            </div>
 
-            <!-- Challenge 3 -->
-            <a href="/challenge3" class="challenge-card">
-                <img src="/assets/images/challenge3.jpg" alt="Challenge 3">
-                <div class="overlay">
-                    <h3 class="challenge-title">Challenge 3</h3>
+            <div class="day-card">
+                <div class="day-header">
+                    <h2>Jour 2</h2>
+                    <span class="day-date">Mardi, 16 Janvier</span>
                 </div>
-            </a>
+                <div class="day-content">
+                    <p>Développement des premières idées, création de prototypes préliminaires et validation des concepts initiaux.</p>
+                    <div class="day-tags">
+                        <span class="tag">Prototype</span>
+                        <span class="tag">Design</span>
+                    </div>
+                </div>
+            </div>
 
-            <!-- Challenge 4 -->
-            <a href="/challenge4" class="challenge-card">
-                <img src="/assets/Images/creeper.png" alt="Challenge 4">
-                <div class="overlay">
-                    <h3 class="challenge-title">Challenge 4</h3>
+            <div class="day-card">
+                <div class="day-header">
+                    <h2>Jour 3</h2>
+                    <span class="day-date">Mercredi, 17 Janvier</span>
                 </div>
-            </a>
+                <div class="day-content">
+                    <p>Approfondissement technique, résolution des défis initiaux et première itération des solutions.</p>
+                    <div class="day-tags">
+                        <span class="tag">Technique</span>
+                        <span class="tag">Résolution</span>
+                    </div>
+                </div>
+            </div>
 
-            <!-- Challenge 5 -->
-            <a href="/challenge5" class="challenge-card">
-                <img src="/assets/images/challenge5.jpg" alt="Challenge 5">
-                <div class="overlay">
-                    <h3 class="challenge-title">Challenge 5</h3>
+            <div class="day-card">
+                <div class="day-header">
+                    <h2>Jour 4</h2>
+                    <span class="day-date">Jeudi, 18 Janvier</span>
                 </div>
-            </a>
+                <div class="day-content">
+                    <p>Raffinement des prototypes, tests utilisateurs et intégration des retours pour améliorer les solutions.</p>
+                    <div class="day-tags">
+                        <span class="tag">Tests</span>
+                        <span class="tag">Feedback</span>
+                    </div>
+                </div>
+            </div>
 
-            <!-- Challenge 6 -->
-            <a href="/challenge6" class="challenge-card">
-                <img src="/assets/images/challenge6.jpg" alt="Challenge 6">
-                <div class="overlay">
-                    <h3 class="challenge-title">Challenge 6</h3>
+            <div class="day-card">
+                <div class="day-header">
+                    <h2>Jour 5</h2>
+                    <span class="day-date">Vendredi, 19 Janvier</span>
                 </div>
-            </a>
-        </section>
+                <div class="day-content">
+                    <p>Finalisation du projet, préparation de la présentation et réflexion sur les apprentissages de la semaine.</p>
+                    <div class="day-tags">
+                        <span class="tag">Finalisation</span>
+                        <span class="tag">Présentation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
-
+    
     <footer class="footer">
+        <!-- Footer content remains the same as in index.html -->
         <div class="footer-container">
             <div class="footer-section">
                 <h3>À propos</h3>
@@ -119,7 +134,7 @@
                     </a>
                 </div>
             </div>
-            
+
             <div class="footer-section">
                 <h3>Liens rapides</h3>
                 <ul class="footer-links">
@@ -128,7 +143,7 @@
                     <li><a href="/tableau">Tableau de bord</a></li>
                 </ul>
             </div>
-            
+
             <div class="footer-section">
                 <h3>Contact</h3>
                 <p>Une question? N'hésitez pas à nous contacter.</p>
@@ -139,7 +154,7 @@
                 </ul>
             </div>
         </div>
-        
+
         <div class="footer-bottom">
             <p>&copy; 2024 Ymmersions. Tous droits réservés.</p>
         </div>

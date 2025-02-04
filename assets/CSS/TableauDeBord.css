@@ -1,0 +1,120 @@
+@font-face {
+    font-family: 'Glakion-Demo-BF6773916988225';
+    src: url('/assets/Font/Glakion-Demo-BF6773916988225.otf'), format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Dealing-Display-BF67587c76dda92';
+    src: url('/assets/Font/Dealing-Display-BF67587c76dda92.otf'), format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+main {
+    margin: 30px 60px;
+    padding-top: 150px;
+    border-radius: 25px;
+    width: 1fr;
+    min-height: 900px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(/assets/Images/codioful-formerly-gradienta--4doJI-wd_s-unsplash.jpg);
+}
+
+.spot-light h1 {
+    font-size: 70px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Glakion-Demo-BF6773916988225';
+    color: #1f387e;
+}
+
+.description {
+    display: flex;
+    justify-content: center;
+    color: #00000094;
+    font-size: large;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.days-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: center;
+    align-items: stretch;
+    gap: 2rem;
+    margin-top: 50px;
+    padding: 0 60px;
+    margin-bottom: 50px;
+}
+
+.day-card {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    border: 2px solid transparent;
+}
+
+.day-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.15);
+    border-color: #3681e3;
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.day-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #99c5fe;
+    padding-bottom: 10px;
+}
+
+.day-header h2 {
+    font-family: 'Dealing-Display-BF67587c76dda92';
+    color: #1f387e;
+    font-size: 28px;
+    margin: 0;
+}
+
+.day-date {
+    font-size: 14px;
+    color: #666;
+    font-style: italic;
+}
+
+.day-content p {
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.day-tags {
+    display: flex;
+    gap: 10px;
+}
+
+.tag {
+    background-color: #99c5fe;
+    color: #1f387e;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    transition: all 0.3s ease;
+}
+
+.day-card:hover .tag {
+    background-color: #3681e3;
+    color: white;
+}
