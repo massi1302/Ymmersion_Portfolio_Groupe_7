@@ -1,7 +1,7 @@
 package main
 
 import (
-	temp "Ymmersion/Templates"
+	temp "Ymmersion/assets/Templates"
 	"Ymmersion/src/routes"
 )
 
