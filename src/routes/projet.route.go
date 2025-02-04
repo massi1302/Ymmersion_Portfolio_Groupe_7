@@ -5,6 +5,6 @@ import (
 	"net/http"
 )
 
-func homeRoutes() {
-	http.HandleFunc("/", controllers.HomePage)
+func projetsRoutes() {
+	http.HandleFunc("/projets", controllers.ProjetsPage)
 }
