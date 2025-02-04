@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'Dailen-Style-BF673e8f5862f96';
-    src: url('/assets/Font/Dailen-Style-BF673e8f5862f96.otf'), format('opentype');
+    font-family: 'Glakion-Demo-BF6773916988225';
+    src: url('/assets/Font/Glakion-Demo-BF6773916988225.otf'), format('opentype');
     font-weight: bold;
     font-style: normal;
   }
@@ -11,6 +11,7 @@
 
 main {
     margin: 30px 60px;
+    padding-top: 150px;
     border-radius: 25px;
     width: 1fr;
     height: 90vh;
@@ -23,6 +24,13 @@ main {
 .spot-light h1 {
     display: flex;
     justify-content: center;
-    font-family: 'Dailen-Style-BF673e8f5862f96';
-    font-size: 32px;
+    font-family: 'Glakion-Demo-BF6773916988225';
+    font-size: 56px;
+}
+
+.description {
+  display: flex;
+  justify-content: center;
+  color: #00000094;
+  font-size: large;
 }

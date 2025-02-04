@@ -1,7 +1,7 @@
 package controllers
 
 import (
-	temp "Ymmersion/Templates"
+	temp "Ymmersion/assets/Templates"
 	"net/http"
 )
 
