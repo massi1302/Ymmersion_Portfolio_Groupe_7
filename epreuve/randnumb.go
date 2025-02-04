@@ -1,34 +1,46 @@
-package main
+package epreuve
 
 import (
-    "fmt"
-    "math/rand"
-    "time"
+	"math/rand"
+	"time"
 )
 
-func main() {
-    rand.Seed(time.Now().UnixNano())
-    
-    targetNumber := rand.Intn(99) + 1
-    
-    var guess int
-    guessCount := 0
-    
-    fmt.Println("Welcome to the Number Guessing Game!")
-    fmt.Println("I've chosen a number between 1 and 99. Try to guess it!")
-    
-    for {
-        fmt.Print("Enter your guess: ")
-        fmt.Scan(&guess)
-        guessCount++
-        
-        if guess < targetNumber {
-            fmt.Println("Too low! The number is higher.")
-        } else if guess > targetNumber {
-            fmt.Println("Too high! The number is lower.")
-        } else {
-            fmt.Printf("Congratulations! You guessed the number %d in %d guesses!\n", targetNumber, guessCount)
-            break
-        }
-    }
+type GameResult struct {
+	TargetNumber int
+	GuessNumber  int
+	Attempts     int
+	Message      string
+	IsCorrect    bool
+}
+
+func PlayGame(guess int) GameResult {
+	// Initialisation du seed une seule fois
+	rand.Seed(time.Now().UnixNano())
+
+	// Nombre à deviner (généré à chaque appel)
+	targetNumber := rand.Intn(99) + 1
+
+	// Compteur de tentatives
+	attempts := 6
+
+	// Résultat du jeu
+	result := GameResult{
+		TargetNumber: targetNumber,
+		GuessNumber:  guess,
+		Attempts:     attempts,
+	}
+
+	// Logique de comparaison
+	if guess < targetNumber {
+		result.Message = "Trop bas ! Le nombre est plus grand."
+		result.IsCorrect = false
+	} else if guess > targetNumber {
+		result.Message = "Trop haut ! Le nombre est plus petit."
+		result.IsCorrect = false
+	} else {
+		result.Message = "Bravo ! Vous avez trouvé le bon nombre !"
+		result.IsCorrect = true
+	}
+
+	return result
 }
