@@ -1,29 +1,72 @@
+@font-face {
+    font-family: 'Glakion-Demo-BF6773916988225';
+    src: url('/assets/Font/Glakion-Demo-BF6773916988225.otf'), format('opentype');
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  #newfont {
+    font-family: 'Dailen-Style-BF673e8f5862f96';
+  }
+
+main {
+    margin: 30px 60px;
+    padding-top: 150px;
+    border-radius: 25px;
+    width: 1fr;
+    height: 1200px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(/assets/Images/codioful-formerly-gradienta--4doJI-wd_s-unsplash.jpg);
+}
+
+.spot-light h1 {
+    font-size: 70px;
+      display: flex;
+      justify-content: center;
+      font-family: 'Glakion-Demo-BF6773916988225';
+  }
+  
+  .description {
+    display: flex;
+    justify-content: center;
+    color: #00000094;
+    font-size: large;
+    margin-bottom: 50px;
+  }
+  
+
 .challenges-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    padding: 0.5rem;
-    height: calc(100vh - 100px); 
-    width: 100%;
+    gap: 1.5rem;
+    padding: 2rem;
+    justify-content: center;
+    align-content: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    height: calc(100vh - 150px);
 }
 
 .challenge-card {
     position: relative;
-    height: 100%;
-    width: 100%;
-    border-radius: 0; 
+    border-radius: 20px;
     overflow: hidden;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: white;
 }
 
 .challenge-card:hover {
     transform: scale(1.05);
-    z-index: 1;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    z-index: 10;
 }
 
 .challenge-card img {
     width: 100%;
-    height: 100%;
+    height: 400px;
     object-fit: cover;
 }
 
@@ -44,27 +87,17 @@
     text-align: center;
 }
 
-
-main {
-    height: calc(100vh - 60px); 
-    overflow: hidden;
-}
-
 @media (max-width: 768px) {
     .challenges-grid {
         grid-template-columns: repeat(2, 1fr);
-        height: calc(100vh - 80px);
+        height: auto;
+        padding: 1rem;
     }
 }
 
 @media (max-width: 480px) {
     .challenges-grid {
         grid-template-columns: 1fr;
-        height: auto; 
-        gap: 0.5rem;
-    }
-    
-    .challenge-card {
-        height: 33vh; 
+        gap: 1rem;
     }
 }
