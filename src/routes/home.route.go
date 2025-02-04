@@ -7,4 +7,5 @@ import (
 
 func homeRoutes() {
 	http.HandleFunc("/", controllers.HomePage)
+	http.HandleFunc("/projets", controllers.ProjetsPage)
 }

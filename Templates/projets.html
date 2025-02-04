@@ -1,0 +1,96 @@
+{{define "index"}}
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio des immersions - YtrangeR">
+    <title> Portfolio d'immersion</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/CSS/unversal.css">
+    <link rel="stylesheet" href="/assets/CSS/projets.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="nav-container">
+        <nav>
+            <div class="left-nav">
+                <a href="/" class="logo">YtrangeR</a>
+            </div>
+            <div class="right-nav">
+                <a href="/" class="nav-button">Accueil</a>
+                <a href="/Templates/projets.html" class="nav-button">Projets</a>
+                <a href="/about" class="nav-button">À propos</a>
+            </div>
+        </nav>
+    </div>
+
+    <main>
+
+        <section class="challenges-grid">
+            <!-- Challenge 1 -->
+            <a href="/challenge1" class="challenge-card">
+                <img src="/assets/Images/creeper.png" alt="Challenge 1">
+                <div class="overlay">
+                    <h3 class="challenge-title">Challenge 1</h3>
+                </div>
+            </a>
+
+            <!-- Challenge 2 -->
+            <a href="/challenge2" class="challenge-card">
+                <img src="/assets/images/challenge2.jpg" alt="Challenge 2">
+                <div class="overlay">
+                    <h3 class="challenge-title">Challenge 2</h3>
+                </div>
+            </a>
+
+            <!-- Challenge 3 -->
+            <a href="/challenge3" class="challenge-card">
+                <img src="/assets/images/challenge3.jpg" alt="Challenge 3">
+                <div class="overlay">
+                    <h3 class="challenge-title">Challenge 3</h3>
+                </div>
+            </a>
+
+            <!-- Challenge 4 -->
+            <a href="/challenge4" class="challenge-card">
+                <img src="/assets/images/challenge4.jpg" alt="Challenge 4">
+                <div class="overlay">
+                    <h3 class="challenge-title">Challenge 4</h3>
+                </div>
+            </a>
+
+            <!-- Challenge 5 -->
+            <a href="/challenge5" class="challenge-card">
+                <img src="/assets/images/challenge5.jpg" alt="Challenge 5">
+                <div class="overlay">
+                    <h3 class="challenge-title">Challenge 5</h3>
+                </div>
+            </a>
+
+            <!-- Challenge 6 -->
+            <a href="/challenge6" class="challenge-card">
+                <img src="/assets/images/challenge6.jpg" alt="Challenge 6">
+                <div class="overlay">
+                    <h3 class="challenge-title">Challenge 6</h3>
+                </div>
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; {{.Year}} YtrangeR. Tous droits réservés.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
+{{end}}
