@@ -1,0 +1,22 @@
+{{define "challenge2"}}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu du Nombre Mystère</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
+        input, button { margin-top: 10px; padding: 10px; font-size: 16px; }
+    </style>
+</head>
+<body>
+    <h1>Devinez le nombre entre 1 et 99</h1>
+    <form method="post">
+        <input type="number" name="guess" min="1" max="99" required>
+        <button type="submit">Deviner</button>
+    </form>
+    <p>{{.}}</p>
+</body>
+</html>
+{{end}}
