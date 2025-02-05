@@ -10,5 +10,3 @@ func main() {
 	temp.InitTemplates()
 	routes.InitServe()
 }
-
-//test
