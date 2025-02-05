@@ -11,6 +11,7 @@ func InitServe() {
 	ProjetsRoutes()
 	tableauRoutes()
 	Challenge2Routes()
+	Challenge1Routes()
 	fmt.Println("Le serveur est opérationel : http://localhost:8080")
 	http.ListenAndServe("localhost:8080", nil)
 }
