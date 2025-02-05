@@ -19,8 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const { offsetX, offsetY } = e;
             const { width, height } = card.getBoundingClientRect();
             
-            const xRotation = -10 * ((offsetY - height / 2) / height);
-            const yRotation = 10 * ((offsetX - width / 2) / width);
+            const xRotation = -30 * ((offsetY - height / 2) / height);
+            const yRotation = 30 * ((offsetX - width / 2) / width);
 
             card.style.transform = `perspective(500px) rotateX(${xRotation}deg) rotateY(${yRotation}deg)`;
         });
