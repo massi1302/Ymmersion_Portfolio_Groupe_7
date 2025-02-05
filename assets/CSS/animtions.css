@@ -1,0 +1,164 @@
+/* animations.css */
+
+/* Fade in and slide up animation for main content */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Gradient animation for the header background */
+@keyframes gradientFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Floating animation for cards */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Pulse animation for buttons */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(54, 129, 227, 0.4);
+    }
+    70% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 10px rgba(54, 129, 227, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(54, 129, 227, 0);
+    }
+}
+
+/* Shimmer effect for text */
+@keyframes shimmer {
+    0% {
+        background-position: -200% center;
+    }
+    100% {
+        background-position: 200% center;
+    }
+}
+
+/* Apply animations to elements */
+
+/* Header animation */
+.header {
+    background: linear-gradient(270deg, #d6ddfd, #3e9cfc, #99c5fe);
+    background-size: 200% 200%;
+    animation: gradientFlow 10s ease infinite;
+}
+
+/* Main content fade in */
+main {
+    animation: fadeInUp 1s ease-out;
+}
+
+/* Team cards hover effect */
+
+/* Buttons animation */
+.nav-button:hover, 
+.animated-button:hover,
+.password-container button:hover {
+    animation: pulse 1.5s infinite;
+}
+
+/* Spotlight title shimmer effect */
+.spot-light h1 {
+    background: linear-gradient(90deg, 
+        #1f387e 0%, 
+        #3681e3 25%, 
+        #1f387e 50%, 
+        #3681e3 75%, 
+        #1f387e 100%);
+    background-size: 200% auto;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 8s linear infinite;
+}
+
+/* Day cards stagger animation */
+.days-container {
+    perspective: 1000px;
+}
+
+/* Tags hover animation */
+.tag {
+    transition: all 0.3s ease;
+}
+
+.tag:hover {
+    transform: scale(1.1) rotate(3deg);
+    background-color: #3681e3;
+    color: white;
+}
+
+/* Social buttons hover animation */
+.social-button {
+    transition: all 0.3s ease;
+}
+
+.social-button:hover {
+    animation: float 1.5s ease-in-out infinite;
+    background: rgba(54, 129, 227, 0.2);
+}
+
+/* Password generator form animation */
+.password-container {
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+}
+
+.password-container:hover {
+    transform: translateZ(20px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Password result animation */
+.password-result {
+    opacity: 0;
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+/* Project details container animation */
+.project-details-container {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards;
+    animation-delay: 0.3s;
+}
+
+/* Footer sections animation */
+.footer-section {
+    opacity: 0;
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+.footer-section:nth-child(1) { animation-delay: 0.1s; }
+.footer-section:nth-child(2) { animation-delay: 0.2s; }
+.footer-section:nth-child(3) { animation-delay: 0.3s; }

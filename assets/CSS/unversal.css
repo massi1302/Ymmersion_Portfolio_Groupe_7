@@ -30,7 +30,7 @@ body {
 }
 
 .header {
-  background: linear-gradient(to left, #99c5fe, #3681e3);
+  background: linear-gradient(to left, #d6ddfd, #3e9cfc );
   padding: 1rem 0;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
   margin: 20px 60px;
@@ -97,7 +97,7 @@ nav {
 }
 
 .footer {
-  background: linear-gradient(to left, #d7fafe, #e3f8fa);
+  background: linear-gradient(to left, #d4f0fc, #b6f6ff);
   padding: 2rem 0;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
   margin: 20px 60px;
