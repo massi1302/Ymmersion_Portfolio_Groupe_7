@@ -1,16 +1,4 @@
-@font-face {
-    font-family: 'Glakion-Demo-BF6773916988225';
-    src: url('/assets/Font/Glakion-Demo-BF6773916988225.otf'), format('opentype');
-    font-weight: bold;
-    font-style: normal;
-}
 
-@font-face {
-    font-family: 'Dealing-Display-BF67587c76dda92';
-    src: url('/assets/Font/Dealing-Display-BF67587c76dda92.otf'), format('opentype');
-    font-weight: bold;
-    font-style: normal;
-}
 
 main {
     margin: 30px 60px;
@@ -28,7 +16,6 @@ main {
     font-size: 70px;
     display: flex;
     justify-content: center;
-    font-family: 'Glakion-Demo-BF6773916988225';
     color: #1f387e;
 }
 
@@ -82,7 +69,6 @@ main {
 }
 
 .day-header h2 {
-    font-family: 'Dealing-Display-BF67587c76dda92';
     color: #1f387e;
     font-size: 28px;
     margin: 0;

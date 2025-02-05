@@ -1,9 +1,4 @@
-@font-face {
-  font-family: 'Dealing-Display-BF67587c76dda92';
-  src: url('/assets/Font/Dealing-Display-BF67587c76dda92.otf'), format('opentype');
-  font-weight: bold;
-  font-style: normal;
-}
+
 
 * {
   padding: 0;
@@ -111,7 +106,6 @@ nav {
 }
 
 .footer-section h3 {
-  font-family: 'Dealing-Display-BF67587c76dda92';
   font-size: 24px;
   margin-bottom: 20px;
 }
