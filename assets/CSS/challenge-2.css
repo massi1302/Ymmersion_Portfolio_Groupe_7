@@ -1,82 +1,116 @@
-
-body {
-    font-family: 'Arial', sans-serif;
+main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
-    background: linear-gradient(135deg, #1e3c72, #2a5298);
-    color: white;
+    padding: 30px;
+    background-image: url(/assets/Images/codioful-formerly-gradienta--4doJI-wd_s-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-.game-container {
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+.challenge-container {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    padding: 40px;
     text-align: center;
-    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    width: 100%;
     max-width: 400px;
-    width: 90%;
 }
 
-h1 {
-    margin-bottom: 1.5rem;
-    color: #ffffff;
+.challenge-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.input-section {
-    margin: 1.5rem 0;
+.challenge-container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+    background: rgba(255, 255, 255, 0.9);
 }
 
-input {
-    padding: 10px;
+.challenge-title {
+    font-size: 48px;
+    color: #1f387e;
+    margin-bottom: 20px;
+}
+
+.challenge-description {
     font-size: 18px;
-    width: 100px;
-    border: none;
-    border-radius: 5px;
+    color: #00000094;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.challenge-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.challenge-input input {
+    padding: 12px;
+    font-size: 18px;
+    width: 200px;
+    border: 2px solid #1f387e;
+    border-radius: 10px;
     text-align: center;
-    margin: 10px 0;
+    transition: all 0.3s ease;
 }
 
-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s;
-    margin: 10px 0;
+.challenge-input input:focus {
+    outline: none;
+    border-color: #3681e3;
+    box-shadow: 0 0 10px rgba(54, 129, 227, 0.3);
 }
 
-button:hover {
-    background-color: #45a049;
-}
-
-#message {
-    margin: 20px 0;
+.challenge-btn {
+    padding: 12px 30px;
     font-size: 18px;
-    min-height: 27px;
+    background-color: #1f387e;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-#attempts {
-    font-size: 16px;
-    color: #ffd700;
+.challenge-btn:hover {
+    background-color: #3681e3;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-.results {
+.challenge-result {
     margin-top: 20px;
-    padding: 10px;
-    border-radius: 5px;
+    font-size: 20px;
+    color: #1f387e;
 }
 
-.success {
-    color: #4CAF50;
+.challenge-attempts {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #666;
 }
 
-.hint {
-    color: #ffd700;
+@media (max-width: 768px) {
+    main {
+        margin: 15px 30px;
+        height: auto;
+    }
+
+    .challenge-container {
+        padding: 20px;
+    }
+
+    .challenge-title {
+        font-size: 36px;
+    }
 }

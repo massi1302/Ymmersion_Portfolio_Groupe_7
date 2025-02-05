@@ -5,18 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jeu du Nombre Mystère</title>
-    <style>
-        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
-        input, button { margin-top: 10px; padding: 10px; font-size: 16px; }
-    </style>
+    <link rel="stylesheet" href="/assets/css/challenge-2.css">
 </head>
 <body>
-    <h1>Devinez le nombre entre 1 et 99</h1>
-    <form method="post">
-        <input type="number" name="guess" min="1" max="99" required>
-        <button type="submit">Deviner</button>
-    </form>
-    <p>{{.}}</p>
+    <main>
+        <div class="challenge-container">
+            <h1 class="challenge-title">Devinez le nombre mystère</h1>
+            
+            <p class="challenge-description">Trouvez le nombre caché entre 1 et 99 en utilisant le moins d'essais possible !</p>
+            
+            <form method="post" class="challenge-input">
+                <input type="number" name="guess" min="1" max="99" required placeholder="Votre devinette">
+                <button type="submit" class="challenge-btn">Deviner</button>
+            </form>
+            
+            <div class="challenge-result">
+                <p>{{.}}</p>
+            </div>
+            
+            <div class="challenge-attempts">
+                <!-- Attempts tracking can be added here -->
+            </div>
+        </div>
+    </main>
 </body>
 </html>
 {{end}}
