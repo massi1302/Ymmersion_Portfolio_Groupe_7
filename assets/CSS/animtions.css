@@ -81,6 +81,7 @@ main {
 /* Team cards hover effect */
 
 /* Buttons animation */
+.challenge-btn:hover,
 .nav-button:hover, 
 .animated-button:hover,
 .password-container button:hover {

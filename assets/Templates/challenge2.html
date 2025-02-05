@@ -5,10 +5,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jeu du Nombre Mystère</title>
+    <link rel="stylesheet" href="/assets/CSS/animtions.css">
+    <link rel="stylesheet" href="/assets/CSS/unversal.css">
     <link rel="stylesheet" href="/assets/CSS/challenge-2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Questrial&display=swap" rel="stylesheet">
 </head>
 <body>
+    <header class="header">
+        <div class="container">
+            <nav>
+                <div class="left-nav">
+                    <p class="logo">Ymmersions</p>
+                </div>
+                <div class="right-nav">
+                    <a href="/" class="nav-button">Accueil</a>
+                    <a href="/projets" class="nav-button">épreuves</a>
+                    <a href="/tableau" class="nav-button">Journal de bord</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
     <main>
+        <div class="spot-light">
+            <h1>Nombre Mystère</h1>
+            <p class="description">
+                Testez votre intuition en devinant le nombre secret !
+            </p>
+        </div>
         
         <div class="challenge-container">
             <h1 class="challenge-title">Devinez le nombre mystère</h1>
@@ -23,12 +50,68 @@
             <div class="challenge-result">
                 <p>{{.}}</p>
             </div>
-            
-            <div class="challenge-attempts">
-                <!-- Attempts tracking can be added here -->
+        </div>
+
+        <div class="project-details-container">
+            <div class="project-details">
+                <h2>Détails du Projet</h2>
+                
+                <p><span class="section-title">Objectif :</span> 
+                Créer un jeu interactif où les utilisateurs doivent deviner un nombre aléatoire.</p>
+                
+                <p><span class="section-title">Technologies utilisées :</span>
+                Go (backend), HTML5, CSS3, Design responsive, Gestion concurrentielle</p>
+                
+                <p><span class="section-title">Fonctionnalités clés :</span>
+                - Génération aléatoire sécurisée du nombre mystère
+                - Feedback instantané pour guider le joueur
+                - Interface utilisateur intuitive et responsive
+                - Gestion des sessions multijoueurs</p>
+                
+                <p><span class="section-title">Défis techniques :</span>
+                - Implémentation de la génération aléatoire
+                - Gestion des accès concurrents avec mutex
+                - Validation des entrées utilisateur
+                - Design responsive et animations fluides</p>
+                
+                <p><span class="section-title">Apprentissages :</span>
+                Développement de compétences en gestion d'état, concurrence en Go, et conception d'interfaces utilisateur intuitives.</p>
+            </div>
+            <div class="project-image">
+                <img src="/assets/Images/image1.png" alt="Illustration du jeu du nombre mystère" />
             </div>
         </div>
     </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>À propos</h3>
+                <p>Découvrez notre jeu du nombre mystère, un défi amusant pour tester votre intuition.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Liens rapides</h3>
+                <ul class="footer-links">
+                    <li><a href="/">Accueil</a></li>
+                    <li><a href="/projets">Épreuves</a></li>
+                    <li><a href="/tableau">Tableau de bord</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Une question? N'hésitez pas à nous contacter.</p>
+                <ul class="footer-links">
+                    <li>Email: contact@ymmersions.com</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 Ymmersions. Tous droits réservés.</p>
+        </div>
+    </footer>
 </body>
 </html>
 {{end}}
