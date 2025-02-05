@@ -1,41 +1,50 @@
+
 document.addEventListener('DOMContentLoaded', () => {
     const challengeCards = document.querySelectorAll('.challenge-card');
     const spotLight = document.querySelector('.spot-light');
+    
+    // Mode sombre/clair
+    const toggleThemeButton = document.createElement('button');
+    toggleThemeButton.textContent = '🌓 Changer de thème';
+    toggleThemeButton.classList.add('theme-toggle');
+    document.querySelector('.header .container').appendChild(toggleThemeButton);
 
-    // Reveal animation for spot light
-    spotLight.style.opacity = '0';
-    spotLight.style.transform = 'translateY(20px)';
-    setTimeout(() => {
-        spotLight.style.transition = 'all 0.8s ease-out';
-        spotLight.style.opacity = '1';
-        spotLight.style.transform = 'translateY(0)';
-    }, 300);
+    toggleThemeButton.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+    });
 
-    // Interactive hover effects for challenge cards
+    // Parallax sur les cartes de défi
     challengeCards.forEach(card => {
-        const img = card.querySelector('img');
-        const overlay = card.querySelector('.overlay');
-        const title = card.querySelector('.challenge-title');
+        card.addEventListener('mousemove', (e) => {
+            const { offsetX, offsetY } = e;
+            const { width, height } = card.getBoundingClientRect();
+            
+            const xRotation = -10 * ((offsetY - height / 2) / height);
+            const yRotation = 10 * ((offsetX - width / 2) / width);
 
-        card.addEventListener('mouseenter', () => {
-            img.style.transform = 'scale(1.1)';
-            overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.6)';
-            title.style.transform = 'translateY(0)';
-            title.style.opacity = '1';
+            card.style.transform = `perspective(500px) rotateX(${xRotation}deg) rotateY(${yRotation}deg)`;
         });
 
         card.addEventListener('mouseleave', () => {
-            img.style.transform = 'scale(1)';
-            overlay.style.backgroundColor = 'transparent';
-            title.style.transform = 'translateY(20px)';
-            title.style.opacity = '0';
+            card.style.transform = 'perspective(500px) rotateX(0) rotateY(0)';
         });
     });
 
-    // Preload images for smoother experience
+    // Préchargement et lazy loading des images
+    const imageObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src;
+                imageObserver.unobserve(img);
+            }
+        });
+    });
+
     challengeCards.forEach(card => {
         const img = card.querySelector('img');
-        const tempImage = new Image();
-        tempImage.src = img.src;
+        img.dataset.src = img.src;
+        img.src = ''; // Placeholder vide
+        imageObserver.observe(img);
     });
 });

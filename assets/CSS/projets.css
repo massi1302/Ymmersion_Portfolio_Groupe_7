@@ -82,6 +82,31 @@ main {
     text-align: center;
 }
 
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode .challenge-card {
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .challenge-card:hover {
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+}
+
+body.dark-mode .challenge-card .overlay {
+    background: linear-gradient(transparent, rgba(255, 255, 255, 0.2));
+}
+
+body.dark-mode .header,
+body.dark-mode .footer {
+    background: linear-gradient(to left, #2c2c2c, #1a1a1a);
+}
+
+
+
 @media (max-width: 768px) {
     .challenges-grid {
         grid-template-columns: repeat(2, 1fr);

@@ -178,3 +178,115 @@ main {
   margin: 0;
   padding: 0 10px;
 }
+
+.team-section.sliding-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  height: 500px;
+}
+
+.team-card {
+  position: absolute;
+  transition: all 0.7s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  opacity: 0;
+  transform: scale(0.7) translateX(-150%);
+}
+
+.team-card.side-left {
+  transform: scale(0.8) translateX(-50%) rotate(15deg);
+  opacity: 0.5;
+  z-index: 1;
+}
+
+.team-card.side-right {
+  transform: scale(0.8) translateX(50%) rotate(-15deg);
+  opacity: 0.5;
+  z-index: 1;
+}
+
+.team-card.active-member {
+  transform: scale(1.1) translateX(0);
+  opacity: 1;
+  z-index: 10;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+.team-card.hidden {
+  opacity: 0;
+  transform: scale(0.5) translateX(200%);
+}
+
+.pagination-controls {
+  position: absolute;
+  bottom: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+}
+
+.pagination-button {
+  background-color: #3681e3;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pagination-button svg {
+  stroke: white;
+  width: 24px;
+  height: 24px;
+}
+
+.pagination-button:hover {
+  background-color: #99c5fe;
+  transform: scale(1.1);
+}
+
+.member-swipe-controls {
+  position: absolute;
+  bottom: -70px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.team-card.active-member:hover .member-swipe-controls {
+  opacity: 1;
+}
+
+.swipe-left, .swipe-right {
+  background-color: #3681e3;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.swipe-left svg, .swipe-right svg {
+  stroke: white;
+  width: 24px;
+  height: 24px;
+}
+
+.swipe-left:hover, .swipe-right:hover {
+  background-color: #99c5fe;
+  transform: scale(1.1);
+}

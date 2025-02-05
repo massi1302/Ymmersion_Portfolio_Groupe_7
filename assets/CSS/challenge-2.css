@@ -100,6 +100,39 @@ main {
     color: #666;
 }
 
+.challenge-content {
+    max-width: 1200px;
+    margin: 30px 60px;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-image: url(/assets/Images/codioful-formerly-gradienta--4doJI-wd_s-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.challenge-section {
+    background-color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 15px;
+}
+
+.code-snippet {
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    padding: 1rem;
+    font-family: monospace;
+    overflow-x: auto;
+    margin-top: 1rem;
+}
+
+body.dark-mode .challenge-section {
+    background-color: rgba(30, 30, 30, 0.9);
+    color: white;
+}
+
 @media (max-width: 768px) {
     main {
         margin: 15px 30px;
