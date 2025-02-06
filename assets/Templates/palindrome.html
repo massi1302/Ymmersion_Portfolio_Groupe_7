@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vérificateur de Palindrome</title>
-    <link rel="stylesheet" href="/assets/CSS/animations.css">
+    <link rel="stylesheet" href="/assets/CSS/animtions.css">
     <link rel="stylesheet" href="/assets/CSS/unversal.css">
-    <link rel="stylesheet" href="/assets/CSS/palindrome.css">
+    <link rel="stylesheet" href="/assets/CSS/palindrom.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Questrial&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
@@ -35,19 +36,16 @@
                 Découvrez si votre mot ou phrase est un palindrome !
             </p>
         </div>
-        
-        <div class="palindrome-container">
-            <h1 class="palindrome-title">Testez votre palindrome</h1>
-            
-            <p class="palindrome-description">Un palindrome se lit de la même façon dans les deux sens, comme "radar" ou "kayak".</p>
-            
-            <form method="post" class="palindrome-input">
+
+        <div class="password-container">
+            <h1>Testez votre palindrome</h1>
+            <form method="post">
                 <input type="text" name="word" required placeholder="Entrez un mot ou une phrase">
-                <button type="submit" class="palindrome-btn">Vérifier</button>
+                <button type="submit">Vérifier</button>
             </form>
-            
+    
             {{if .}}
-            <div class="palindrome-result {{if .IsValid}}valid{{else}}invalid{{end}}">
+            <div class="password-result {{if .IsValid}}valid{{else}}invalid{{end}}">
                 <p>{{.Message}}</p>
                 {{if .Input}}
                 <p class="input-display">Votre entrée : "{{.Input}}"</p>
@@ -76,6 +74,12 @@
                 - Traitement des chaînes de caractères
                 - Validation des entrées utilisateur
                 - Design responsive et animations fluides</p>
+                
+                <p><span class="section-title">Apprentissages :</span>
+                Développement de compétences en manipulation de chaînes, logique de validation et design d'interface.</p>
+            </div>
+            <div class="project-image">
+                <img src="/assets/Images/palindrome-image.png" alt="Illustration de vérification de palindrome" />
             </div>
         </div>
     </main>
@@ -84,7 +88,7 @@
         <div class="footer-container">
             <div class="footer-section">
                 <h3>À propos</h3>
-                <p>Découvrez notre vérificateur de palindrome, un outil amusant pour tester vos mots et phrases.</p>
+                <p>Découvrez notre vérificateur de palindrome.</p>
             </div>
             
             <div class="footer-section">
