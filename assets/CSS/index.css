@@ -1,21 +1,20 @@
-
 main {
-    margin: 30px 60px;
-    padding-top: 150px;
-    border-radius: 25px;
-    width: 1fr;
-    height: 1200px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url(/assets/Images/codioful-formerly-gradienta--4doJI-wd_s-unsplash.jpg);
+  margin: 30px 60px;
+  padding-top: 150px;
+  border-radius: 25px;
+  width: 1fr;
+  height: 1000px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(/assets/Images/codioful-formerly-gradienta--4doJI-wd_s-unsplash.jpg);
 }
 
 .spot-light h1 {
   font-size: 70px;
-    display: flex;
-    justify-content: center;
-    color: #1f387e;
+  display: flex;
+  justify-content: center;
+  color: #1f387e;
 }
 
 .description {
@@ -121,10 +120,10 @@ main {
 }
 
 .team-section {
-  margin: 100px 60px;
+  margin: 300px 60px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  gap: 100px;
   row-gap: 50px;
 }
 
@@ -132,6 +131,8 @@ main {
   background: rgba(255, 255, 255, 0.8);
   border-radius: 20px;
   padding: 20px;
+  height: 300px;
+  width: 800px;
   text-align: center;
   transition: all 0.3s ease;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -179,6 +180,15 @@ main {
   padding: 0 10px;
 }
 
+.team-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+
 .team-section.sliding-pagination {
   display: flex;
   justify-content: center;
@@ -211,7 +221,7 @@ main {
   transform: scale(1.1) translateX(0);
   opacity: 1;
   z-index: 10;
-  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
 }
 
 .team-card.hidden {
@@ -267,7 +277,8 @@ main {
   opacity: 1;
 }
 
-.swipe-left, .swipe-right {
+.swipe-left,
+.swipe-right {
   background-color: #3681e3;
   border: none;
   width: 40px;
@@ -280,13 +291,15 @@ main {
   transition: all 0.3s ease;
 }
 
-.swipe-left svg, .swipe-right svg {
+.swipe-left svg,
+.swipe-right svg {
   stroke: white;
   width: 24px;
   height: 24px;
 }
 
-.swipe-left:hover, .swipe-right:hover {
+.swipe-left:hover,
+.swipe-right:hover {
   background-color: #99c5fe;
   transform: scale(1.1);
 }
