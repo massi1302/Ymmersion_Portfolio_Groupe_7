@@ -1,59 +1,68 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const teamSection = document.querySelector('.team-section');
-    const teamCards = Array.from(teamSection.querySelectorAll('.team-card'));
-    let currentIndex = 1; // Start with middle member
-  
-    // Add swipe navigation buttons to each card
+  const teamSection = document.querySelector('.team-section');
+  const teamCards = document.querySelectorAll('.team-card');
+  let currentIndex = 0;
+  const totalCards = teamCards.length;
+
+  // Ajout des classes initiales
+  function initializeCards() {
     teamCards.forEach((card, index) => {
-      const swipeControls = document.createElement('div');
-      swipeControls.classList.add('member-swipe-controls');
-      swipeControls.innerHTML = `
-        <button class="swipe-left" data-index="${index}">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M15 18l-6-6 6-6"/>
-          </svg>
-        </button>
-        <button class="swipe-right" data-index="${index}">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M9 18l6-6-6-6"/>
-          </svg>
-        </button>
-      `;
-      card.appendChild(swipeControls);
+      if (index === currentIndex) {
+        card.classList.add('active');
+      } else if (index === (currentIndex + 1) % totalCards) {
+        card.classList.add('next');
+      } else if (index === (currentIndex - 1 + totalCards) % totalCards) {
+        card.classList.add('prev');
+      } else {
+        card.classList.add('hidden');
+      }
     });
-  
-    function updateMemberDisplay() {
-      teamCards.forEach((card, index) => {
-        card.classList.remove('active-member', 'side-left', 'side-right', 'hidden');
-        
-        if (index === currentIndex) {
-          card.classList.add('active-member');
-        } else if (index === currentIndex - 1) {
-          card.classList.add('side-left');
-        } else if (index === currentIndex + 1) {
-          card.classList.add('side-right');
-        } else {
-          card.classList.add('hidden');
-        }
-      });
+  }
+
+  // Gestion du déplacement des cartes
+  function moveCards(direction) {
+    // Supprimer toutes les classes actuelles
+    teamCards.forEach(card => {
+      card.classList.remove('active', 'prev', 'next', 'hidden');
+    });
+
+    // Mettre à jour l'index
+    if (direction === 'next') {
+      currentIndex = (currentIndex + 1) % totalCards;
+    } else {
+      currentIndex = (currentIndex - 1 + totalCards) % totalCards;
     }
-  
-    // Swipe event listeners
-    teamSection.addEventListener('click', (e) => {
-      const leftButton = e.target.closest('.swipe-left');
-      const rightButton = e.target.closest('.swipe-right');
-  
-      if (leftButton) {
-        currentIndex = Math.max(0, currentIndex - 1);
-        updateMemberDisplay();
-      }
-  
-      if (rightButton) {
-        currentIndex = Math.min(teamCards.length - 1, currentIndex + 1);
-        updateMemberDisplay();
+
+    // Appliquer les nouvelles classes
+    teamCards.forEach((card, index) => {
+      if (index === currentIndex) {
+        card.classList.add('active');
+      } else if (index === (currentIndex + 1) % totalCards) {
+        card.classList.add('next');
+      } else if (index === (currentIndex - 1 + totalCards) % totalCards) {
+        card.classList.add('prev');
+      } else {
+        card.classList.add('hidden');
       }
     });
-  
-    // Initial display
-    updateMemberDisplay();
-  });
+  }
+
+  // Création des boutons de navigation
+  const navigationButtons = document.createElement('div');
+  navigationButtons.className = 'navigation-buttons';
+  navigationButtons.innerHTML = `
+    <button class="prev-btn">←</button>
+    <button class="next-btn">→</button>
+  `;
+  teamSection.appendChild(navigationButtons);
+
+  // Event listeners pour les boutons
+  const prevBtn = navigationButtons.querySelector('.prev-btn');
+  const nextBtn = navigationButtons.querySelector('.next-btn');
+
+  prevBtn.addEventListener('click', () => moveCards('prev'));
+  nextBtn.addEventListener('click', () => moveCards('next'));
+
+  // Initialisation
+  initializeCards();
+});
