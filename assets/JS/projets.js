@@ -2,16 +2,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const challengeCards = document.querySelectorAll('.challenge-card');
     const spotLight = document.querySelector('.spot-light');
-    
-    // Mode sombre/clair
-    const toggleThemeButton = document.createElement('button');
-    toggleThemeButton.textContent = '🌓 Changer de thème';
-    toggleThemeButton.classList.add('theme-toggle');
-    document.querySelector('.header .container').appendChild(toggleThemeButton);
-
-    toggleThemeButton.addEventListener('click', () => {
-        document.body.classList.toggle('dark-mode');
-    });
 
     // Parallax sur les cartes de défi
     challengeCards.forEach(card => {
