@@ -37,3 +37,6 @@ func PasswordValidatorRoutes() {
 	http.HandleFunc("/password-validator", controllers.PasswordValidatorPage)
 }
 
+func TextAnalyzerRoutes() {
+	http.HandleFunc("/text-analyzer", controllers.TextAnalyzerPage)
+}

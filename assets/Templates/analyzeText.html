@@ -1,0 +1,123 @@
+{{define "text-analyzer"}}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyseur de Texte</title>
+    <link rel="stylesheet" href="/assets/CSS/unversal.css">
+    <link rel="stylesheet" href="/assets/CSS/analyzText.css">
+    <link rel="stylesheet" href="/assets/CSS/animtions.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Questrial&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav>
+                <div class="left-nav">
+                    <p class="logo">Ymmersions</p>
+                </div>
+                <div class="right-nav">
+                    <a href="/" class="nav-button">Accueil</a>
+                    <a href="/projets" class="nav-button">épreuves</a>
+                    <a href="/tableau" class="nav-button">Journal de bord</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="spot-light">
+            <h1>
+                Analyseur de Texte
+            </h1>
+            <p class="description">
+                Analysez votre texte et découvrez ses caractéristiques.
+            </p>
+        </div>
+
+        <div class="password-container">
+            <h1>Analyser votre texte !!</h1>
+            <form method="post">
+                <textarea name="text" rows="4" style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #3681e3; border-radius: 8px;" placeholder="Entrez votre texte ici...">{{.Text}}</textarea>
+                <button type="submit">Analyser</button>
+            </form>
+    
+            {{if .Error}}
+            <div class="password-result" style="color: red;">
+                {{.Error}}
+            </div>
+            {{else if .WordCount}}
+            <div class="password-result">
+                <p>📝 Nombre de mots : <strong>{{.WordCount}}</strong></p>
+                <p>🔢 Nombre de caractères (sans espaces) : <strong>{{.CharCount}}</strong></p>
+                <p>🏆 Mot le plus long : <strong>"{{.LongestWord}}"</strong></p>
+            </div>
+            {{end}}
+        </div>
+
+        <div class="project-details-container">
+            <div class="project-details">
+                <h2>Détails du Projet</h2>
+                
+                <p><span class="section-title">Objectif :</span> 
+                Créer un analyseur de texte qui fournit des informations détaillées sur le contenu textuel.</p>
+                
+                <p><span class="section-title">Technologies utilisées :</span>
+                Go (backend), HTML5, CSS3, Design responsive</p>
+                
+                <p><span class="section-title">Fonctionnalités clés :</span>
+                - Calcul du nombre de mots
+                - Décompte des caractères
+                - Identification du mot le plus long
+                - Interface utilisateur intuitive</p>
+                
+                <p><span class="section-title">Défis techniques :</span>
+                - Manipulation de chaînes de caractères
+                - Gestion des différents cas de texte
+                - Traitement précis des espaces et des mots</p>
+                
+                <p><span class="section-title">Apprentissages :</span>
+                Développement de compétences en traitement de texte, manipulation de chaînes et analyse de données.</p>
+            </div>
+            <div class="project-image">
+                <img src="/assets/Images/analyzeText.png" alt="Illustration de l'analyse de texte" />
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>À propos</h3>
+                <p>Découvrez notre outil d'analyse de texte détaillé.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Liens rapides</h3>
+                <ul class="footer-links">
+                    <li><a href="/">Accueil</a></li>
+                    <li><a href="/projets">Épreuves</a></li>
+                    <li><a href="/tableau">Tableau de bord</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Une question? N'hésitez pas à nous contacter.</p>
+                <ul class="footer-links">
+                    <li>Email: contact@ymmersions.com</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 Ymmersions. Tous droits réservés.</p>
+        </div>
+    </footer>
+</body>
+</html>
+{{end}}
