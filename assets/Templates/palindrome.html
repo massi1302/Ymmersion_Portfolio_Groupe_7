@@ -1,0 +1,114 @@
+{{define "palindrome"}}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vérificateur de Palindrome</title>
+    <link rel="stylesheet" href="/assets/CSS/animations.css">
+    <link rel="stylesheet" href="/assets/CSS/universal.css">
+    <link rel="stylesheet" href="/assets/CSS/palindrome.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav>
+                <div class="left-nav">
+                    <p class="logo">Ymmersions</p>
+                </div>
+                <div class="right-nav">
+                    <a href="/" class="nav-button">Accueil</a>
+                    <a href="/projets" class="nav-button">épreuves</a>
+                    <a href="/tableau" class="nav-button">Journal de bord</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="spot-light">
+            <h1>Vérificateur de Palindrome</h1>
+            <p class="description">
+                Découvrez si votre mot ou phrase est un palindrome !
+            </p>
+        </div>
+        
+        <div class="palindrome-container">
+            <h1 class="palindrome-title">Testez votre palindrome</h1>
+            
+            <p class="palindrome-description">Un palindrome se lit de la même façon dans les deux sens, comme "radar" ou "kayak".</p>
+            
+            <form method="post" class="palindrome-input">
+                <input type="text" name="word" required placeholder="Entrez un mot ou une phrase">
+                <button type="submit" class="palindrome-btn">Vérifier</button>
+            </form>
+            
+            {{if .}}
+            <div class="palindrome-result {{if .IsValid}}valid{{else}}invalid{{end}}">
+                <p>{{.Message}}</p>
+                {{if .Input}}
+                <p class="input-display">Votre entrée : "{{.Input}}"</p>
+                {{end}}
+            </div>
+            {{end}}
+        </div>
+
+        <div class="project-details-container">
+            <div class="project-details">
+                <h2>Détails du Projet</h2>
+                
+                <p><span class="section-title">Objectif :</span> 
+                Créer un vérificateur de palindrome interactif permettant aux utilisateurs de tester des mots et des phrases.</p>
+                
+                <p><span class="section-title">Technologies utilisées :</span>
+                Go (backend), HTML5, CSS3, Design responsive</p>
+                
+                <p><span class="section-title">Fonctionnalités clés :</span>
+                - Vérification instantanée des palindromes
+                - Gestion des espaces et de la casse
+                - Interface utilisateur intuitive
+                - Feedback visuel des résultats</p>
+                
+                <p><span class="section-title">Défis techniques :</span>
+                - Traitement des chaînes de caractères
+                - Validation des entrées utilisateur
+                - Design responsive et animations fluides</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>À propos</h3>
+                <p>Découvrez notre vérificateur de palindrome, un outil amusant pour tester vos mots et phrases.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Liens rapides</h3>
+                <ul class="footer-links">
+                    <li><a href="/">Accueil</a></li>
+                    <li><a href="/projets">Épreuves</a></li>
+                    <li><a href="/tableau">Tableau de bord</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Une question? N'hésitez pas à nous contacter.</p>
+                <ul class="footer-links">
+                    <li>Email: contact@ymmersions.com</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 Ymmersions. Tous droits réservés.</p>
+        </div>
+    </footer>
+</body>
+</html>
+{{end}}
