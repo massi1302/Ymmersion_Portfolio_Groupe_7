@@ -280,7 +280,7 @@ align-items: center;
   animation-delay: 0.3s;
 }
 
-.profile-button {
+.epreuve-button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -288,8 +288,8 @@ align-items: center;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  color: #000000;
-  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  background-color:#3681e3;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 8px;
   padding: 10px 20px;
@@ -299,14 +299,14 @@ align-items: center;
   width: 100%;
 }
 
-.profile-button:hover {
-  color: #ffffff;
-  background-color: rgba(255, 255, 255, 0.2);
+.epreuve-button:hover {
+  color: #000000;
+  background-color: #3681e3;
   border-color: rgba(255, 255, 255, 0.3);
-  transform: translateY(-1px);
+  transform: translateY(-5px);
 }
 
-.profile-button:active {
+.epreuve-button:active {
   transform: translateY(0);
   box-shadow: none;
 }
