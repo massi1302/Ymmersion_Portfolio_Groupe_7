@@ -33,3 +33,7 @@ func PalindromeRoutes() {
 	http.HandleFunc("/palindrome", controllers.PalindromePage)
 }
 
+func PasswordValidatorRoutes() {
+	http.HandleFunc("/password-validator", controllers.PasswordValidatorPage)
+}
+

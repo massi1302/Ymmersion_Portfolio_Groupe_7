@@ -6,6 +6,7 @@ import (
 	"os"
 	"strings"
 	"unicode"
+	temp "Ymmersion/assets/Templates"
 )
 
 // Fonction pour évaluer la force du mot de passe

@@ -15,6 +15,7 @@ func InitServe() {
 	Challenge1Routes()
 	PasswordGeneratorRoutes()
 	PalindromeRoutes()
+	PasswordValidatorRoutes()
 	fmt.Println("Le serveur est opérationel : http://localhost:8080")
 	http.ListenAndServe("localhost:8080", nil)
 }
