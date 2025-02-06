@@ -12,7 +12,7 @@ main {
     align-items: center;
 }
 
-.password-container {
+.palindrome-container {
     background: rgba(255, 255, 255, 0.8);
     border-radius: 20px;
     padding: 40px;
@@ -25,12 +25,12 @@ main {
     margin-top: 50px;
 }
 
-.password-container h1 {
+.palindrome-container h1 {
     color: #1f387e;
     margin-bottom: 20px;
 }
 
-.password-container input {
+.palindrome-container input {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
@@ -38,7 +38,7 @@ main {
     border-radius: 8px;
 }
 
-.password-container button {
+.palindrome-container button {
     background-color: #3681e3;
     color: white;
     border: none;
@@ -48,11 +48,11 @@ main {
     transition: all 0.3s ease;
 }
 
-.password-container button:hover {
+.palindrome-container button:hover {
     background-color: #1f387e;
 }
 
-.password-result {
+.palindrome-result {
     margin-top: 20px;
     padding: 10px;
     background-color: rgba(255, 255, 255, 0.9);

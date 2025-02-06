@@ -7,7 +7,7 @@
     <title>Vérificateur de Palindrome</title>
     <link rel="stylesheet" href="/assets/CSS/animtions.css">
     <link rel="stylesheet" href="/assets/CSS/unversal.css">
-    <link rel="stylesheet" href="/assets/CSS/palindrom.css">
+    <link rel="stylesheet" href="/assets/CSS/palindrome.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
@@ -37,7 +37,7 @@
             </p>
         </div>
 
-        <div class="password-container">
+        <div class="palindrome-container">
             <h1>Testez votre palindrome</h1>
             <form method="post">
                 <input type="text" name="word" required placeholder="Entrez un mot ou une phrase">
@@ -45,7 +45,7 @@
             </form>
     
             {{if .}}
-            <div class="password-result {{if .IsValid}}valid{{else}}invalid{{end}}">
+            <div class="palindrome-result {{if .IsValid}}valid{{else}}invalid{{end}}">
                 <p>{{.Message}}</p>
                 {{if .Input}}
                 <p class="input-display">Votre entrée : "{{.Input}}"</p>
