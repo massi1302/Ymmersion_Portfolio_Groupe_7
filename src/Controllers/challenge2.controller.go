@@ -48,5 +48,3 @@ func Challenge2Page(w http.ResponseWriter, r *http.Request) {
 
 	temp.Temp.ExecuteTemplate(w, "challenge2", message)
 }
-
-//ggfuy
