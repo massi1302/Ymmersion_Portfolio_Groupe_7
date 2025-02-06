@@ -101,12 +101,31 @@ main {
 
 /* Buttons de navigation */
 .navigation-buttons {
+  position: relative;
+ width: 100%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.prev-btn, .next-btn {
+  background-color: #fff; /* Adjust as needed */
+  border: none;
+  cursor: pointer;
+  font-size: 24px; /* Adjust as needed */
+  padding: 10px; /* Adjust as needed */
+}
+
+.prev-btn {
   position: absolute;
-  bottom: -60px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 20px;
+  left: 0;
+  margin-left: 50px;
+}
+
+.next-btn {
+  position: absolute;
+  right: 0;
+  margin-right: 50px;
 }
 
 .navigation-buttons button {
@@ -167,11 +186,6 @@ main {
   fill: white;
 }
 
-/* Animation pour le drag */
-.team-card.grabbing {
-  transition: none;
-  cursor: grabbing;
-}
 
 /* Effet de survol des cartes */
 .team-card:hover .team-photo {
