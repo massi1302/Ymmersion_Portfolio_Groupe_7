@@ -1,12 +1,124 @@
-{{ define "challenge1" }}
+{{define "challenge1"}}
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-  <link rel="stylesheet" href="/assets/CSS/challenge-1.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Créateur de Creeper</title>
+    <link rel="stylesheet" href="/assets/CSS/challenge-1.css">
+    <link rel="stylesheet" href="/assets/CSS/animtions.css">
+    <link rel="stylesheet" href="/assets/CSS/unversal.css">
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="creeper">
-  </div>
+    <header class="header">
+        <div class="container">
+            <nav>
+                <div class="left-nav">
+                    <p class="logo">Ymmersions</p>
+                </div>
+                <div class="right-nav">
+                    <a href="/" class="nav-button">Accueil</a>
+                    <a href="/projets" class="nav-button">épreuves</a>
+                    <a href="/tableau" class="nav-button">Journal de bord</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="spot-light">
+            <h1>Créateur de Creeper</h1>
+            <p class="description">
+                Découvrez notre création du célèbre monstre de Minecraft !
+            </p>
+        </div>
+        
+        <div class="challenge-container">
+            <div class="head-green">
+                <div class="top-highlight-cont">
+                    <div class="top-highlight"></div>
+                    <div class="top-highlight"></div>
+                </div>
+                <div class="Eye-cont">
+                    <div class="eye"></div>
+                    <div class="eye"></div>
+                </div>
+                <div class="side-highlight-cont">
+                    <div class="side-highlight"></div>
+                    <div class="side-highlight"></div>
+                </div>
+                <div class="mouth-top-highlight"></div>
+                <div class="mouth-top"></div>
+                <div class="mouth-middle"></div>
+                <div class="mouth-middle-highlight"></div>
+                <div class="bottom-cont">
+                    <div class="mouth-bottom"></div>
+                    <div class="mouth-bottom"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-details-container">
+            <div class="project-details">
+                <h2>Détails du Projet</h2>
+                
+                <p><span class="section-title">Objectif :</span> 
+                Créer une reproduction fidèle du Creeper de Minecraft en utilisant uniquement HTML et CSS.</p>
+                
+                <p><span class="section-title">Technologies utilisées :</span>
+                HTML5, CSS3, Flexbox, Positionnement absolu</p>
+                
+                <p><span class="section-title">Fonctionnalités clés :</span>
+                - Design pixelisé fidèle au jeu original
+                - Utilisation de formes géométriques CSS
+                - Effets de profondeur avec les ombrages
+                - Structure modulaire pour faciliter les modifications</p>
+                
+                <p><span class="section-title">Défis techniques :</span>
+                - Reproduction précise des proportions
+                - Gestion des superpositions d'éléments
+                - Optimisation du code CSS
+                - Maintien de la cohérence visuelle</p>
+                
+                <p><span class="section-title">Apprentissages :</span>
+                Perfectionnement des compétences en CSS, notamment en positionnement et en design pixel art.</p>
+            </div>
+            <div class="project-image">
+                <img src="/assets/Images/minecraft-creeper.png" alt="Image de référence d'un Creeper Minecraft" />
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>À propos</h3>
+                <p>Découvrez notre création du Creeper, l'emblématique monstre de Minecraft réalisé en CSS pur.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Liens rapides</h3>
+                <ul class="footer-links">
+                    <li><a href="/">Accueil</a></li>
+                    <li><a href="/projets">Épreuves</a></li>
+                    <li><a href="/tableau">Tableau de bord</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Une question? N'hésitez pas à nous contacter.</p>
+                <ul class="footer-links">
+                    <li>Email: contact@ymmersions.com</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 Ymmersions. Tous droits réservés.</p>
+        </div>
+    </footer>
 </body>
 </html>
-{{ end }}
+{{end}}
