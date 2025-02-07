@@ -23,7 +23,6 @@ main {
   font-size: large;
 }
 
-/* Section équipe */
 .team-section {
   position: relative;
   height: 500px;
@@ -99,7 +98,6 @@ main {
   text-align: center;
 }
 
-/* Buttons de navigation */
 .navigation-buttons {
   position: relative;
  width: 100%;
@@ -109,11 +107,11 @@ align-items: center;
 }
 
 .prev-btn, .next-btn {
-  background-color: #fff; /* Adjust as needed */
+  background-color: #fff;
   border: none;
   cursor: pointer;
-  font-size: 24px; /* Adjust as needed */
-  padding: 10px; /* Adjust as needed */
+  font-size: 24px;
+  padding: 10px;
 }
 
 .prev-btn {
@@ -146,7 +144,7 @@ align-items: center;
 .navigation-buttons button:hover {
   background: #d8e9ffab;
 }
-/* Controls de navigation */
+
 .carousel-controls {
   position: absolute;
   bottom: -60px;
@@ -186,14 +184,11 @@ align-items: center;
   fill: white;
 }
 
-
-/* Effet de survol des cartes */
 .team-card:hover .team-photo {
   transform: scale(1.05);
   border-color: #858c95;
 }
 
-/* Container wrapper */
 .project-sections-wrapper {
   max-width: 1200px;
   margin: 60px auto;
@@ -203,7 +198,6 @@ align-items: center;
   gap: 30px;
 }
 
-/* Individual containers */
 .info-container {
   background: rgba(255, 255, 255, 0.8);
   border-radius: 20px;
@@ -217,7 +211,6 @@ align-items: center;
   transform: translateY(-5px);
 }
 
-/* Content styling */
 .info-content {
   max-width: 800px;
   margin: 0 auto;
@@ -242,7 +235,6 @@ align-items: center;
   margin-bottom: 25px;
 }
 
-/* List styling */
 .info-content ul {
   list-style-type: none;
   padding-left: 0;
@@ -264,7 +256,6 @@ align-items: center;
   color: #1c1d1e;
 }
 
-/* Animation for each container */
 .info-container {
   animation: fadeInUp 0.8s ease-out;
 }
@@ -312,7 +303,6 @@ align-items: center;
   box-shadow: none;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .project-sections-wrapper {
       padding: 0 15px;
@@ -331,8 +321,6 @@ align-items: center;
   }
 }
 
-
-/* Media Queries */
 @media (max-width: 768px) {
   .team-section {
     height: 400px;
