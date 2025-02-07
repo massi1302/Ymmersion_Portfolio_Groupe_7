@@ -90,12 +90,14 @@ main {
   font-size: 24px;
   color: #1f387e;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .team-description {
   font-size: 16px;
   color: #666;
   line-height: 1.5;
+  text-align: center;
 }
 
 /* Buttons de navigation */
