@@ -26,6 +26,7 @@ func PasswordGeneratorPage(w http.ResponseWriter, r *http.Request) {
 }
 
 func generatePassword(length int, err error) PasswordGeneratorResult {
+	 // Valide que la longueur est entre 8 et 16 caractères
 	if err != nil || length < 8 || length > 16 {
 		return PasswordGeneratorResult{
 			Error: "Password length must be between 8 and 16 characters.",
@@ -34,9 +35,9 @@ func generatePassword(length int, err error) PasswordGeneratorResult {
 
 	rand.Seed(time.Now().UnixNano())
 	password := ""
-	
+	 // Génère un mot de passe aléatoire selon la longueur spécifiée
 	for i := 0; i < length; i++ {
-		password += string(rune(rand.Intn(94) + 33))
+		password += string(rune(rand.Intn(94) + 33))// Utilise des caractères ASCII entre 33 et 126 (caractères imprimables)
 	}
 
 	return PasswordGeneratorResult{

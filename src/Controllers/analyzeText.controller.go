@@ -15,6 +15,9 @@ type TextAnalysisResult struct {
 }
 
 func TextAnalyzerPage(w http.ResponseWriter, r *http.Request) {
+	 // Gère la page d'analyse de texte
+	 // Si la méthode est POST, analyse le texte soumis
+	 // Si la méthode est GET, affiche le formulaire vide
 	if r.Method == "POST" {
 		// Parse form data
 		err := r.ParseForm()
@@ -30,7 +33,7 @@ func TextAnalyzerPage(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// GET request, render empty form
+// Requête GET, rendu du formulaire vide
 	temp.Temp.ExecuteTemplate(w, "text-analyzer", TextAnalysisResult{})
 }
 
