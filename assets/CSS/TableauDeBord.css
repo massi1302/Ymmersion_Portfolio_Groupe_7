@@ -2,7 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Questrial', sans-serif;
+    font-family: "Questrial";
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+  
 }
 
 body {
