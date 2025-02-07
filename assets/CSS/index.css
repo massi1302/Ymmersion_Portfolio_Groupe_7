@@ -16,6 +16,14 @@ main {
   justify-content: center;
 }
 
+.spot-light h2 {
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
 .description {
   display: flex;
   justify-content: center;
@@ -29,7 +37,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 50px 0;
+  margin: 30px 0;
 }
 
 .team-card {
@@ -48,7 +56,8 @@ main {
   transform: translateX(0) scale(1);
   opacity: 1;
   z-index: 3;
-  pointer-events: auto;  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  pointer-events: auto;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
 .team-card.prev {
@@ -100,13 +109,14 @@ main {
 
 .navigation-buttons {
   position: relative;
- width: 100%;
-display: flex;
-justify-content: space-between;
-align-items: center;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.prev-btn, .next-btn {
+.prev-btn,
+.next-btn {
   background-color: #fff;
   border: none;
   cursor: pointer;
@@ -281,7 +291,8 @@ align-items: center;
 }
 
 .epreuve-button {
-  flex: 1; /* This allows the épreuve button to take remaining space */
+  flex: 1;
+  /* This allows the épreuve button to take remaining space */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -335,19 +346,19 @@ align-items: center;
 
 @media (max-width: 768px) {
   .project-sections-wrapper {
-      padding: 0 15px;
+    padding: 0 15px;
   }
 
   .info-container {
-      padding: 30px;
+    padding: 30px;
   }
 
   .info-content h2 {
-      font-size: 24px;
+    font-size: 24px;
   }
 
   .info-content h3 {
-      font-size: 18px;
+    font-size: 18px;
   }
 }
 
