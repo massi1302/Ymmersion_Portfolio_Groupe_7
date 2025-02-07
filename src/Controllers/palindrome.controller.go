@@ -12,6 +12,7 @@ type PalindromeResult struct {
 	IsValid bool
 }
 
+ // Gère la page de vérification des palindromes
 func PalindromePage(w http.ResponseWriter, r *http.Request) {
 	if r.Method == http.MethodGet {
 		temp.Temp.ExecuteTemplate(w, "palindrome", nil)
@@ -29,7 +30,7 @@ func checkPalindrome(word string) PalindromeResult {
 			IsValid: false,
 		}
 	}
-
+ 	// Vérifie si le mot ou la phrase soumis est un palindrome
 	// Nettoyer le mot (enlever les espaces et convertir en minuscules)
 	cleaned := strings.ToLower(strings.ReplaceAll(word, " ", ""))
 

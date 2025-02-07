@@ -29,13 +29,13 @@ A dynamic portfolio website documenting our team's journey and challenges during
 
 ## 📂 Project Structure
 ```
-Ymmersion_Portfolio_Groupe_{GroupNumber}/
+Ymmersion_Portfolio_Groupe_7/
 │
 ├── assets/
 │   ├── CSS/
 │   ├── JS/
-│   |── Templates/
 │   └── Templates/
+│  
 │
 ├── src/
 │   ├── Controllers/
