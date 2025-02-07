@@ -8,18 +8,17 @@
     <link rel="stylesheet" href="/assets/CSS/unversal.css">
     <link rel="stylesheet" href="/assets/CSS/analyzText.css">
     <link rel="stylesheet" href="/assets/CSS/animtions.css">
+    <link rel="stylesheet" href="/assets/CSS/modal.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Questrial&display=swap" rel="stylesheet">
+    <script src="/assets/JS/script.js" defer> </script>
 </head>
 <body>
     <header class="header">
         <div class="container">
             <nav>
-                <div class="left-nav">
-                    <p class="logo">Ymmersions</p>
-                </div>
                 <div class="right-nav">
                     <a href="/" class="nav-button">Accueil</a>
                     <a href="/projets" class="nav-button">épreuves</a>
@@ -84,7 +83,7 @@
                 Développement de compétences en traitement de texte, manipulation de chaînes et analyse de données.</p>
             </div>
             <div class="project-image">
-                <img src="/assets/Images/analyzeText.png" alt="Illustration de l'analyse de texte" />
+                <img src="/assets/Images/analyzeText.png" alt="Illustration de l'analyse de texte" class="zoomable-image" onclick="openModal(this)" />
             </div>
         </div>
     </main>
@@ -118,6 +117,10 @@
             <p>&copy; 2024 Ymmersions. Tous droits réservés.</p>
         </div>
     </footer>
+    <div class="modal" id="imageModal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
 </body>
 </html>
 {{end}}
