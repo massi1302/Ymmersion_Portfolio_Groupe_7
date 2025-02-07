@@ -1,5 +1,5 @@
 main {
-  margin: 30px 60px;
+  margin: 30px 45px;
   padding-top: 150px;
   border-radius: 25px;
   width: 1fr;
@@ -292,7 +292,7 @@ align-items: center;
 }
 
 .epreuve-button:hover {
-  color: #000000;
+  color: #ffffff;
   background-color: #000000;
   border-color: rgba(255, 255, 255, 0.3);
   transform: translateY(-5px);
