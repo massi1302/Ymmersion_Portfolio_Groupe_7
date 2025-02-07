@@ -121,11 +121,6 @@
   background-color: #000;
 }
 
-main {
-  margin: 30px 60px;
-  padding-top: 50px;
-}
-
 .spot-light {
   text-align: center;
   margin-bottom: 30px;
@@ -133,7 +128,7 @@ main {
 
 .spot-light h1 {
   font-size: 2.5em;
-  color: #1f387e;
+  color: #000000;
   margin-bottom: 10px;
 }
 
@@ -147,61 +142,13 @@ main {
   padding-top: 150px;
   border-radius: 25px;
   width: 1fr;
-  height: 1800px;
+  height: 2000px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.password-container {
-  background: rgba(255, 255, 255, 0.8);
-  border-radius: 20px;
-  padding: 40px;
-  text-align: center;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  width: 400px;
-  margin-bottom: 50px;
-  margin-top: 50px;
-}
-
-.password-container h1 {
-  color: #1f387e;
-  margin-bottom: 20px;
-}
-
-.password-container input {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #3681e3;
-  border-radius: 8px;
-}
-
-.password-container button {
-  background-color: #3681e3;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.password-container button:hover {
-  background-color: #1f387e;
-}
-
-.password-result {
-  margin-top: 20px;
-  padding: 10px;
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 8px;
-  word-break: break-all;
 }
 
 .project-details-container {
@@ -233,7 +180,7 @@ main {
 }
 .project-details h2 {
   color: #1f387e;
-  border-bottom: 2px solid #3681e3;
+  border-bottom: 2px solid #000000;
   padding-bottom: 10px;
   margin-bottom: 20px;
 }
@@ -243,7 +190,7 @@ main {
 }
 .project-details .section-title {
   font-weight: bold;
-  color: #3681e3;
+  color: #000000;
   margin-bottom: 10px;
 }
 
