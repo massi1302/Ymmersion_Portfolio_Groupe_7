@@ -24,6 +24,12 @@ main {
     margin-bottom: 50px;
 }
 
+#challenge2-image {
+    width: 50%;
+    height: 60%;
+    margin-left: 25%;
+}
+
 .challenges-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -100,14 +106,12 @@ main {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(
-        45deg,
-        transparent 0%,
-        rgba(255, 255, 255, 0.2) 45%,
-        rgba(255, 255, 255, 0.4) 50%,
-        rgba(255, 255, 255, 0.2) 55%,
-        transparent 100%
-    );
+    background: linear-gradient(45deg,
+            transparent 0%,
+            rgba(255, 255, 255, 0.2) 45%,
+            rgba(255, 255, 255, 0.4) 50%,
+            rgba(255, 255, 255, 0.2) 55%,
+            transparent 100%);
     opacity: 0;
     transition: opacity 0.3s ease;
     pointer-events: none;
@@ -123,6 +127,7 @@ main {
     0% {
         transform: translateX(-200%);
     }
+
     100% {
         transform: translateX(200%);
     }
