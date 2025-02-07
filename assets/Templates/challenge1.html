@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Questrial&display=swap" rel="stylesheet">
+    <script src="/assets/JS/script.js" defer> </script>
 </head>
 <body>
     <header class="header">
@@ -88,7 +89,7 @@
                 Perfectionnement des compétences en CSS, notamment en positionnement et en design pixel art.</p>
             </div>
             <div class="project-image">
-                <img src="/assets/Images/CreeperCode.png" alt="Image de référence d'un Creeper Minecraft" />
+                <img src="/assets/Images/CreeperCode.png" alt="Image de référence d'un Creeper Minecraft" class="zoomable-image" onclick="openModal(this)" />
             </div>
         </div>
     </main>
@@ -122,6 +123,10 @@
             <p>&copy; 2024 Ymmersions. Tous droits réservés.</p>
         </div>
     </footer>
+    <div class="modal" id="imageModal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
 </body>
 </html>
 {{end}}
