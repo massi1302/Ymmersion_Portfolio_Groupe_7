@@ -14,14 +14,6 @@ A dynamic portfolio website documenting our team's journey and challenges during
 2. Run `go mod tidy`
 3. Execute `go run main.go`
 
-## 👥 Team Members
-- Michel Mustafov: Frontend Developer
-- Stephen Micosa: Backend Developer
-- Edwin Wehbe: Full-stack Developer
-- Abdulmalek Esughi: UX Designer
-- Massinissa Ahfir: DevOps Engineer
-- Victor Uzodimma: Quality Assurance Specialist
-
 ## 🛠 Technologies Used
 - Frontend: HTML, CSS
 - Backend: Golang
