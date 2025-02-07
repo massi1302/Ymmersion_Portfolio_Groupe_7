@@ -42,15 +42,15 @@
 @keyframes pulse {
     0% {
         transform: scale(1);
-        box-shadow: 0 0 0 0 rgba(54, 129, 227, 0.4);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.4);
     }
     70% {
         transform: scale(1.05);
-        box-shadow: 0 0 0 10px rgba(54, 129, 227, 0);
+        box-shadow: 0 0 0 10px rgba(35, 36, 37, 0);
     }
     100% {
         transform: scale(1);
-        box-shadow: 0 0 0 0 rgba(54, 129, 227, 0);
+        box-shadow: 0 0 0 0 rgba(53, 54, 56, 0);
     }
 }
 
@@ -66,17 +66,10 @@
 
 /* Apply animations to elements */
 
-/* Header animation */
-.header {
-    background: linear-gradient(270deg, #edf1ff, #52a9ff, #99c5fe);
-    background-size: 200% 200%;
-    animation: gradientFlow 10s ease infinite;
-}
-
 /* Main content fade in */
 main {
     animation: fadeInUp 1s ease-out;
-    background: linear-gradient(270deg, #edf1ff, #52a9ff, #99c5fe);
+    background: linear-gradient(270deg, #afafaf, #aaaaaa, #b2b2b2);
     background-size: 200% 200%;
     animation: gradientFlow 10s ease infinite;
 }
@@ -94,11 +87,11 @@ main {
 /* Spotlight title shimmer effect */
 .spot-light h1 {
     background: linear-gradient(90deg, 
-        #1f387e 0%, 
-        #3681e3 25%, 
-        #1f387e 50%, 
-        #3681e3 75%, 
-        #1f387e 100%);
+        #000000 0%, 
+        #363636 25%, 
+        #2f2f2f 50%, 
+        #484848 75%, 
+        #000000 100%);
     background-size: 200% auto;
     color: transparent;
     background-clip: text;
@@ -119,8 +112,8 @@ main {
 
 .tag:hover {
     transform: scale(1.1) rotate(3deg);
-    background-color: #3681e3;
-    color: white;
+    background-color: #28292b;
+    color: rgb(0, 0, 0);
 }
 
 /* Social buttons hover animation */
@@ -130,7 +123,7 @@ main {
 
 .social-button:hover {
     animation: float 1.5s ease-in-out infinite;
-    background: rgba(54, 129, 227, 0.2);
+    background: rgba(27, 28, 30, 0.2);
 }
 
 /* Password generator form animation */
@@ -167,9 +160,3 @@ main {
 .footer-section:nth-child(1) { animation-delay: 0.1s; }
 .footer-section:nth-child(2) { animation-delay: 0.2s; }
 .footer-section:nth-child(3) { animation-delay: 0.3s; }
-
-.footer {
-    background: linear-gradient(270deg, #edf1ff, #52a9ff, #99c5fe);
-    background-size: 200% 200%;
-    animation: gradientFlow 10s ease infinite;
-}
