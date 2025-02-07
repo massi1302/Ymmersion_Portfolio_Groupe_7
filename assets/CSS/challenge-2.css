@@ -1,9 +1,9 @@
 main {
-    margin: 30px 60px;
+    margin: 30px 45px;
     padding-top: 150px;
     border-radius: 25px;
     width: 1fr;
-    height: 1300px;
+    height: 1600px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -26,7 +26,7 @@ main {
 }
 
 .challenge-title {
-    color: #1f387e;
+    color: #000000;
     margin-bottom: 20px;
     font-size: 32px;
 }
@@ -48,14 +48,14 @@ main {
     width: 100%;
     padding: 12px;
     margin-bottom: 20px;
-    border: 1px solid #3681e3;
+    border: 1px solid #1e1f20;
     border-radius: 8px;
     font-size: 16px;
     text-align: center;
 }
 
 .challenge-btn {
-    background-color: #3681e3;
+    background-color: #000000;
     color: white;
     border: none;
     padding: 12px 30px;
@@ -66,7 +66,7 @@ main {
 }
 
 .challenge-btn:hover {
-    background-color: #1f387e;
+    background-color: #191a1f;
 }
 
 .challenge-result {
@@ -75,7 +75,7 @@ main {
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 8px;
     font-size: 18px;
-    color: #1f387e;
+    color: #000000;
 }
 
 .project-details-container {
@@ -110,8 +110,8 @@ main {
 }
 
 .project-details h2 {
-    color: #1f387e;
-    border-bottom: 2px solid #3681e3;
+    color: #000000;
+    border-bottom: 2px solid #2c2c2c;
     padding-bottom: 10px;
     margin-bottom: 20px;
 }
@@ -123,7 +123,7 @@ main {
 
 .project-details .section-title {
     font-weight: bold;
-    color: #3681e3;
+    color: #000000;
     margin-bottom: 10px;
 }
 

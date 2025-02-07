@@ -1,5 +1,5 @@
 main {
-    margin: 30px 60px;
+    margin: 30px 45px;
     padding-top: 150px;
     border-radius: 25px;
     width: 1fr;
@@ -13,7 +13,7 @@ main {
     font-size: 70px;
     display: flex;
     justify-content: center;
-    color: #1f387e;
+    color: #000000;
 }
 
 .description {
@@ -28,97 +28,289 @@ main {
 .challenges-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+    gap: 2rem;
     padding: 2rem;
-    justify-content: center;
-    align-content: center;
     max-width: 1500px;
     margin: 0 auto;
-    height: calc(100vh - 150px);
+    perspective: 2000px;
 }
 
 .challenge-card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     position: relative;
+    height: 250px;
     border-radius: 20px;
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    background-color: white;
+    transform-style: preserve-3d;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .challenge-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    z-index: 10;
+    transform: translateZ(20px) rotateX(10deg);
+}
+
+.challenge-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        45deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.1) 45%,
+        rgba(255, 255, 255, 0.2) 50%,
+        rgba(255, 255, 255, 0.1) 55%,
+        transparent 100%
+    );
+    transition: transform 0.6s;
+    transform: translateX(-100%);
+    pointer-events: none;
+}
+
+.challenge-card:hover::before {
+    transform: translateX(100%);
 }
 
 .challenge-card img {
-    max-width: 100%;
-    max-height: 250px;
-    width: auto;
-    height: auto;
-    object-fit: contain;
-
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+    padding: 20px; 
+    background-color: white; 
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    transform-origin: center;
 }
 
-.challenge-card .overlay {
+
+.challenge-card:hover img {
+    transform: scale(1.1);
+}
+
+.overlay {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
-    padding: 1.5rem 1rem;
-    color: white;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 2rem;
+    transform: translateY(100%);
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
+.challenge-card:hover .overlay {
+    transform: translateY(0);
+}
 
 .challenge-title {
-    margin: 0;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: bold;
-    text-align: center;
+    color: white;
+    margin: 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    transition-delay: 0.2s;
 }
 
-body.dark-mode {
-    background-color: #121212;
-    color: #ffffff;
-}
-
-body.dark-mode .challenge-card {
-    background-color: #1e1e1e;
-    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
-}
-
-body.dark-mode .challenge-card:hover {
-    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
-}
-
-body.dark-mode .challenge-card .overlay {
-    background: linear-gradient(transparent, rgba(255, 255, 255, 0.2));
-}
-
-body.dark-mode .header,
-body.dark-mode .footer {
-    background: linear-gradient(to left, #2c2c2c, #1a1a1a);
+.challenge-card:hover .challenge-title {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 
+        .challenges-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            perspective: 1000px;
+        }
+
+        .card-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 139%;
+            cursor: pointer;
+        }
+
+        .pokemon-card {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+            overflow: hidden;
+            background: linear-gradient(135deg, #474644 0%, #333332 100%);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            transform-style: preserve-3d;
+            border: 8px solid #555556;
+        }
+
+        .pokemon-card:hover {
+            transform: translateY(-5px) rotateX(5deg) rotateY(5deg);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 60%;
+            object-fit: cover;
+            border-bottom: 3px solid #373736;
+        }
+
+        .card-content {
+            padding: 1rem;
+            background: linear-gradient(135deg, #989898 0%, #cacaca 100%);
+            height: 40%;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .card-description {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .energy-type {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin-right: 5px;
+            background: linear-gradient(135deg, #ff7043 0%, #ff5722 100%);
+        }
+
+        .holographic-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(
+                45deg,
+                transparent 0%,
+                rgba(255, 255, 255, 0.2) 45%,
+                rgba(255, 255, 255, 0.4) 50%,
+                rgba(255, 255, 255, 0.2) 55%,
+                transparent 100%
+            );
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        .pokemon-card:hover .holographic-overlay {
+            opacity: 1;
+            animation: shine 1.5s ease-in-out infinite;
+        }
+
+        @keyframes shine {
+            0% {
+                transform: translateX(-200%);
+            }
+            100% {
+                transform: translateX(200%);
+            }
+        }
+
+/* Animation d'apparition des cartes */
+@keyframes cardAppear {
+    from {
+        opacity: 0;
+        transform: translateY(100px) rotateX(-20deg);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) rotateX(0);
+    }
+}
+
+/* Ajout des animations pour les filtres et effets de survol */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) rotateX(0);
+    }
+    50% {
+        transform: translateY(-10px) rotateX(5deg);
+    }
+}
+
+.particles-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    animation: particleFloat 5s infinite linear;
+}
+
+@keyframes particleFloat {
+    0% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+}
+
+/* Media Queries pour la responsivité */
+@media (max-width: 1200px) {
+    .challenges-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
 @media (max-width: 768px) {
     .challenges-grid {
-        grid-template-columns: repeat(2, 1fr);
-        height: auto;
-        padding: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .challenges-grid {
         grid-template-columns: 1fr;
-        gap: 1rem;
+        padding: 2rem 1rem;
+    }
+    
+    .challenge-card {
+        min-height: 300px;
     }
 }
 
+
+@media (max-width: 1200px) {
+    .challenge-card {
+        height: 220px;
+    }
+}
+
+@media (max-width: 768px) {
+    .challenge-card {
+        height: 200px;
+    }
+}
